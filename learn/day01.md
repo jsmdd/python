@@ -1,4 +1,4 @@
-#　print函数
+# print函数
 - python3中需要在print后加括号，如:print('')    ||python2中不需要
 - 一般使用方法为: print('hello')  || print('hello','word')  效果相同
 - 升阶的参数为  sep  end  file ，其中sep默认为空，end默认为\n，file为文本编辑
