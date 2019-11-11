@@ -1,11 +1,11 @@
-初识
+# 初识
 
 import this
-都是“Python之禅”
+> 都是“Python之禅”
 
 import turtle
- 一个有点意思的构图函数
-
+> 一个有点意思的构图函数
+```
 import turtle
 turtle.pensize(4)
 turtle.pencolor('red')
@@ -16,3 +16,4 @@ turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
+```
