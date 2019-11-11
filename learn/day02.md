@@ -19,7 +19,8 @@ turtle.right(90)
 turtle.forward(100)
 ```
 > 详解：https://docs.python.org/zh-cn/3/library/turtle.html
-> 特别注意此坐标系为原点的前进方向为forward，后退为backword，下为rt，上为lt
+
+特别注意此坐标系为原点的前进方向为forward，后退为backword，下为rt，上为lt(与mode模式有关，默认是standard)
 ```
 """
 python的turtle绘制国旗
