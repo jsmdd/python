@@ -16,5 +16,6 @@ turtle.forward(100)
 turtle.right(90)
 turtle.forward(100)
 turtle.right(90)
+turtle.forward(100)
 ```
 > 详解：https://docs.python.org/zh-cn/3/library/turtle.html
