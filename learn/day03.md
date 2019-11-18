@@ -1,3 +1,4 @@
+```
 """
 python的turtle绘制国旗
 """
@@ -68,3 +69,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
