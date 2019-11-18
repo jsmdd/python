@@ -9,4 +9,4 @@ else:
 print(xxxx)
 ```
 
-> 可以查阅一下 ```from random import randit``` 与```import random```的区别，以及math函数
+> 可以查阅一下 ```from random import randit``` 与```import random```的区别，以及random和math函数
