@@ -44,7 +44,7 @@ for i in range(1,101):
 print(a)
 ```
 ```
-# 判断输入数字是否为素数
+# 判断输入数字是否为素数，其中is_prime 只是用来表示一个flag
 from  math import *
 num = int(input())
 end = int(sqrt(num))
