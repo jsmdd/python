@@ -9,7 +9,7 @@
 - 除去普通的加减乘除，以及%的余数，//的整除
 ### 逻辑运算符
 - not ，or， and，  is，  is not
-``` 
+``` python
 flag0 = 1==1
 flag1 = 2 > 3
 flag2 = flag0 and flag1
