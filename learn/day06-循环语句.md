@@ -27,6 +27,7 @@ print(a)
 - `exit(1)`用来退出整个脚本
 
 ```
+# 可以较好理解分支和循环
 a=0
 for i in range(1,101):
     while True:
@@ -41,4 +42,19 @@ for i in range(1,101):
             print(a)
         break
 print(a)
+```
+```
+# 判断输入数字是否为素数
+from  math import *
+num = int(input())
+end = int(sqrt(num))
+is_prime = True
+for i in range(2,end + 1):
+    if num%i==0:
+        is_prime = False
+        break
+if is_prime and num != 1:
+    print("%d"%(num),"yes")
+else:
+    print("no")
 ```
