@@ -12,6 +12,7 @@ print(xxxx)
 > 可以查阅一下 ```from random import randit``` 与```import random```的区别，以及random和math函数
 
 ## random函数
+> https://www.cnblogs.com/chamie/p/4917820.html
 ```
 from random import *
 list=[1,2,3,4,5,6,7]
@@ -62,4 +63,4 @@ list
 ['and so on...', 'simple', 'powerful', 'pyhton', 'is']
 ```
 
-> random.sample(sequence,k)：从指定序列中随机获取指定长度的片段，sample函数不会修改原有序列。
+> random.sample(sequence,k)：从指定序列中随机获取指定长度的片段，sample函数不会修改原有序列。(是一个个随机抽取)
