@@ -5,7 +5,7 @@ import this
 
 import turtle
 > 一个有点意思的构图函数
-```
+```python
 import turtle
 turtle.pensize(4)
 turtle.pencolor('red')
@@ -21,7 +21,7 @@ turtle.forward(100)
 > 详解：https://docs.python.org/zh-cn/3/library/turtle.html
 
 特别注意此坐标系为原点的前进方向为forward，后退为backword，顺时针为rt，逆时针为lt(与mode模式有关，默认是standard)
-```
+```python
 """
 python的turtle绘制国旗
 """
