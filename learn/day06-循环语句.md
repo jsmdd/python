@@ -25,3 +25,20 @@ print(a)
 - `continue`用来放弃本次循环后续的代码直接让循环进入下一轮
 
 - `exit(1)`用来退出整个脚本
+
+```
+a=0
+for i in range(1,101):
+    while True:
+        if i%2==1:
+            a+=i
+            print(a)
+        elif i%5==0:
+            a-=i
+            print(a)
+        else:
+            a=a
+            print(a)
+        break
+print(a)
+```
