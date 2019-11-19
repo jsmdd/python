@@ -13,7 +13,7 @@ print(xxxx)
 
 ## random函数
 > https://www.cnblogs.com/chamie/p/4917820.html
-```
+```python
 from random import *
 list=[1,2,3,4,5,6,7]
 a=sample(list,3)
@@ -44,7 +44,7 @@ print(f)
 > random.randrange([start],stop[, step])：从指定范围内，按指定基数递增的集合中获取一个随机数。如：random.randrange(10,100,2)，结果相当于从[10,12,14,16,...,96,98]序列中获取一个随机数。
 
 > random.choice(sequence)：参数sequence表示一个有序类型。sequence在python不是一种特定的类型，而是泛指一系列的类型。list，tuple，字符串都属于sequence。
-```
+```python
 >>> import random
 >>> print random.choice("学习python")
 t
@@ -55,7 +55,7 @@ list
 ```
 
 > random.shuffle(x[, random])：用于将一个列表中的元素打乱。
-```
+```python
 >>> import random
 >>> p=["pyhton","is","powerful","simple","and so on..."]
 >>> random.shuffle(p)
