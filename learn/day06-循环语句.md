@@ -1,6 +1,6 @@
 ## for语句
 > `for-in`循环
-```
+```python
 for i in range(100) #代表从0~99
 for i in range(1,101,2) #代表从1~100的奇数
 ```
@@ -8,7 +8,7 @@ for i in range(1,101,2) #代表从1~100的奇数
 ## while语句
 > `while`循环
 - 
-```
+```python
 a=0
 for i in range(2,101,2):
     #if i%2==0:
@@ -26,7 +26,7 @@ print(a)
 
 - `exit(1)`用来退出整个脚本
 
-```
+```python
 # 可以较好理解分支和循环
 a=0
 for i in range(1,101):
@@ -43,7 +43,7 @@ for i in range(1,101):
         break
 print(a)
 ```
-```
+```python
 # 判断输入数字是否为素数，其中is_prime 只是用来表示一个flag
 from  math import *
 num = int(input())
