@@ -78,3 +78,19 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+#### 练习2：随机生成验证码
+```python
+from random import *
+import sys
+def get_code(code_len=8):
+    all_chars='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    code=''
+    for _ in range(code_len):
+        index=randint(0,len(all_chars)-1)
+        code+=all_chars[index]
+    print(code)
+
+if __name__ == '__main__':
+    get_code(int(sys.argv[1]))
+```
