@@ -74,3 +74,5 @@ print(str3.strip())
 >>> print(f'{a}*{b}={a*b}')
 1*2=2
 ```
+
+> python中的标识大多是从0开始计算
