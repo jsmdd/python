@@ -60,3 +60,21 @@ print(list1) # [400, 5, 7, 100, 200, 1000]
 list1.clear()
 print(list1) # []
 ```
+
+
+#### 练习1：在屏幕上显示跑马灯文字。
+```python
+# -*- coding=utf-8 -*-
+import os
+import time
+
+def main():
+    content='welcome~~'
+    while True:
+        os.system('cls')  ## linux中为`clear`
+        print(content)
+        time.sleep(0.2)
+        content=content[1:] +content[0]
+if __name__ == '__main__':
+    main()
+```
