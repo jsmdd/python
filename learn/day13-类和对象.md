@@ -44,3 +44,74 @@ tom only watch tom and jerry~
 jerry are studying just dance
 jerry can watch AV~
 ```
+
+### 练习1：定义一个类描述数字时钟。
+```python
+import time,os
+
+class Clock(object):
+
+    def __init__(self,hour=0,minute=0,sencond=0):
+        self.hour=hour
+        self.minute=minute
+        self.sencond=sencond
+
+    def run(self):   # 通过判断让时间变化
+        self.sencond+=1
+        if self.sencond==60:
+            self.sencond=0
+            self.minute+=1
+            if self.minute==60:
+                self.minute=0
+                self.hour+=1
+                if self.hour==24:
+                    self.hour=0
+
+    def show(self):
+        return '%02d:%02d:%02d'%(self.hour,self.minute,self.sencond)
+        # %02d，和%2d差不多，只不过左边补0,用来显示标准时钟的格式
+def main():
+    #clock=Clock(hour=23,minute=59,sencond=50)
+    clock=Clock()
+    while True:   #  通过一个sleep 1 让显示的时钟和真实时间对应的上
+        os.system('cls')
+        print(clock.show())
+        time.sleep(1)
+        clock.run()
+
+if __name__=='__main__':
+    main()
+```
+
+#### 练习2：定义一个类描述平面上的点并提供移动点和计算到另一个点距离的方法。
+```python
+import math
+import sys
+
+class Point():
+
+    def __init__(self,x=0,y=0):
+        self.x=x
+        self.y=y
+
+    def move(self,x,y):
+        self.x=x
+        self.y=y
+
+    def distance(self,other):
+        a=(self.x-other.x)
+        b=(self.y-other.y)
+        c=math.sqrt(a**2+b**2)
+        return c
+
+def main():
+    print(sys.argv)   # 可以看出sys.argv的作用
+    p1=Point(float(sys.argv[1]),float(sys.argv[2]))
+    p2=Point()
+    p1.move(3,4)
+    p2.move(0,0)
+    print("%.2f"%(p2.distance(p1)))
+
+if __name__=='__main__':
+    main()
+```
