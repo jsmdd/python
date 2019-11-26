@@ -61,3 +61,4 @@ echo $a;
 ```
 可以通过`var_dump()` 函数来判断一个变量的类型为
 String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。
+> NULL 值指明一个变量是否为空值。 同样可用于数据空值和NULL值的区别。可以通过设置变量值为 NULL 来清空变量数据：
