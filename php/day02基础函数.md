@@ -62,3 +62,28 @@ echo $a;
 可以通过`var_dump()` 函数来判断一个变量的类型为
 String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。
 > NULL 值指明一个变量是否为空值。 同样可用于数据空值和NULL值的区别。可以通过设置变量值为 NULL 来清空变量数据：
+## 并置运算符
+如上述所说，在 heredoc 中，变量不需要用连接符 . 或 , 来拼接，在正常情况下是需要的。
+```php
+<?php
+$a="111";
+define("GG","快乐",true);  ## 设置常量
+echo gg,"\n",$a;
+// echo gg."\n".$a;
+// echo gg.PHP_EOL.$a;
+?>
+```
+## strlen() 函数
+```php
+<?php
+echo strlen("Hello world!");
+?>
+```
+strlen() 常常用在循环和其他函数中，因为那时确定字符串何时结束是很重要的
+## strpos() 函数
+```php
+<?php
+echo strpos("Hello world!","world");
+?>
+```
+如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE。
