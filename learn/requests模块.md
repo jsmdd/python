@@ -3,11 +3,17 @@
 Requests 是使用 Apache2 Licensed 许可证的 基于Python开发的HTTP 库，其在Python内置模块的基础上进行了高度的封装
 
 requests.get(url, params=None, **kwargs)
+
 requests.post(url, data=None, json=None, **kwargs)
+
 requests.put(url, data=None, **kwargs)
+
 requests.head(url, **kwargs)
+
 requests.delete(url, **kwargs)
+
 requests.patch(url, data=None, **kwargs)
+
 requests.options(url, **kwargs)
 
 
