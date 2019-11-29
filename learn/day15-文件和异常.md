@@ -71,3 +71,85 @@ with open('a.txt','r') as f:
 with open('a.txt','w') as f:
     f.write(str(111),'\n')
 ```
+
+通过open函数向另一个文件按行写入另一个文件：
+```python
+import time,os
+
+
+def test():
+    try:
+        with open('13.py','r',encoding='utf-8') as f1:
+            for i in f1:
+                print(i,end='')
+                time.sleep(0.5)
+                with open('49.py','a',encoding='utf-8') as f2:
+                    f2.write(str(i))
+        print()
+    finally:
+        if os.path.exists('49.py'):  # 通过判断这个文件路径是否存在
+            print('输出完成!')
+        else:
+            print('输出错误!')
+
+
+if __name__=='__main__':
+    test()
+```
+此处加一个知识点：如何用python判断一个文件或者路径是否存在
+
+## os模块
+使用os.access()方法判断文件是否可进行读写操作。
+
+语法：
+`os.access(path, mode)`
+
+path为文件路径，mode为操作模式，有这么几种:
+
+1. os.F_OK: 检查文件是否存在;
+2. os.R_OK: 检查文件是否可读;
+3. os.W_OK: 检查文件是否可以写入;
+4. os.X_OK: 检查文件是否可以执行 
+
+示例：
+```python
+        if os.access('49.py',os.F_OK):
+            print('输出完成!')
+        else:
+            print('输出错误!')
+```
+
+## 使用Try语句
+如果你open的文件不存在，程序会抛出错误，使用try语句来捕获这个错误。
+
+示例：
+```python
+try:
+    f.open()
+    f.close()
+except IOError:
+    print "File is not accessible."
+```
+
+
+## 使用pathlib模块
+
+使用pathlib需要先使用文件路径来创建path对象。此路径可以是文件名或目录路径。
+
+示例:
+```python
+        if pathlib.Path('49.py'):
+            print('输出完成!')
+        else:
+            print('输出错误!')
+```
+- 检查路径是否存在
+```python
+path = pathlib.Path("path/file")
+path.exist()
+```
+- 检查路径是否是文件
+```python
+path = pathlib.Path("path/file")
+path.is_file()
+```
