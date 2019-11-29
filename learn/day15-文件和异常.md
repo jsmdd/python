@@ -96,7 +96,7 @@ def test():
 if __name__=='__main__':
     test()
 ```
-此处加一个知识点：如何用python判断一个文件或者路径是否存在
+> 此处加一个知识点：如何用python判断一个文件或者路径是否存在
 
 ### os模块
 使用os.access()方法判断文件是否可进行读写操作。
@@ -153,3 +153,84 @@ path.exist()
 path = pathlib.Path("path/file")
 path.is_file()
 ```
+
+## 读写二进制文件
+
+知道了如何读写文本文件要读写二进制文件也就很简单了，下面的代码实现了复制图片文件的功能。
+
+```python
+def main():
+    assert ('linux' in sys.platform)  # 用来判断执行此脚本的环境是否是linux环境
+    try:
+        with open('guido.jpg', 'rb') as fs1:
+            data = fs1.read()
+            print(type(data))  # <class 'bytes'>
+        with open('吉多.jpg', 'wb') as fs2:
+            fs2.write(data)
+    except FileNotFoundError as e:
+        print('指定的文件无法打开.')
+    except IOError as e:
+        print('读写文件时出现错误.')
+    print('程序执行结束.')
+
+
+if __name__ == '__main__':
+    main()
+```
+> 用于判断一个表达式，在表达式条件为 false 的时候触发异常。断言可以在条件不满足程序运行的情况下直接返回错误，而不必等待程序运行后出现崩溃的情况
+
+
+## 读写JSON文件
+
+`json`模块
+写
+```python
+import json
+
+
+def main():
+    mydict = {
+        'name': '骆昊',
+        'age': 38,
+        'qq': 957658,
+        'friends': ['王大锤', '白元芳'],
+        'cars': [
+            {'brand': 'BYD', 'max_speed': 180},
+            {'brand': 'Audi', 'max_speed': 280},
+            {'brand': 'Benz', 'max_speed': 320}
+        ]
+    }
+    try:
+        with open('data.json', 'w', encoding='utf-8') as fs:
+            json.dump(mydict, fs)
+    except IOError as e:
+        print(e)
+    print('保存数据完成!')
+
+
+if __name__ == '__main__':
+    main()
+```
+读
+```python
+import json
+
+
+def main():
+    try:
+        with open('data.json','r',encoding='utf-8') as f:
+            print(json.load(f))
+    except IOError as es:
+        print(es)
+    print('successlly')
+
+if __name__=='__main__':
+    main()
+```
+
+- `dump` - 将Python对象按照JSON格式写入到文件中
+- `dumps` - 将Python对象处理成JSON格式的字符串
+- `load` - 将文件中的JSON数据读取成python对象
+- `loads` - 将字符串的内容读取成Python对象
+
+json.dump和json.load是python和文件的交互操作。
