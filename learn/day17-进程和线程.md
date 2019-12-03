@@ -15,7 +15,8 @@ def download(filename):
 
 def main():
     start=time.time()
-    p1=multiprocessing.Process(target=download,args=('从删库到跑路',))  # 在args中不加  逗号会提示单引号中的字符数量问题
+    p1=multiprocessing.Process(target=download,args=('从删库到跑路',))  
+    # 在args中不加 逗号会提示单引号中的字符数量问题
     p1.start()
     p2=multiprocessing.Process(target=download,args=('从入门到放弃',))
     p2.start()
