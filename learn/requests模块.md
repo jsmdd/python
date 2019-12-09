@@ -38,6 +38,7 @@ requests模块的返回对象是一个Response对象，可以从这个对象中�
 6. r.headers      响应头部
 7. r.cookies      Cookie
 8. r.url          url
+
 .................
 
 > 参考文章：https://www.cnblogs.com/wang-yc/p/5623711.html
